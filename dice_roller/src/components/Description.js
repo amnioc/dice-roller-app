@@ -1,8 +1,9 @@
 const Description = () => {
   return (
     <h3 id="description">
-      Welcome! Click the button below to roll a die*!
-      <span id="specialMessage"> *That's one single 6-sided dice!</span>
+      Welcome! Please enter your number of dice being thrown (will default to
+      1). Then click how many sides your dice has!
+      <span id="specialMessage"> *May the Odds Be in Your Favour*</span>
     </h3>
   );
 };

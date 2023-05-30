@@ -1,10 +1,9 @@
 const ResetButton = (props) => {
-  const { setNewNumber } = props;
+  const { setNewNumber, setAllRolls } = props;
 
   const resetScreen = () => {
-    setNewNumber(() => {
-      return "";
-    });
+    setNewNumber("");
+    setAllRolls([]);
   };
 
   return (

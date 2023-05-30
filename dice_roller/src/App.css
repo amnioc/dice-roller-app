@@ -54,3 +54,11 @@
   font-weight: bold;
   box-sizing: border-box;
 }
+
+.throws-list {
+  list-style-type: none;
+}
+
+.throw-num {
+  margin-right: 20px;
+}

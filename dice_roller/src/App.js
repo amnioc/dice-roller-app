@@ -5,17 +5,26 @@ import { useState } from "react";
 import PickADice from "./components/PickADice";
 import ResetButton from "./components/ResetButton";
 import DiceResult from "./components/DiceResult";
+import DiceCount from "./components/DiceCount";
 
 function App() {
-  const [number, setNewNumber] = useState("-");
+  const [number, setNewNumber] = useState("");
+  const [diceCount, setDiceCount] = useState("1");
+  const [allRolls, setAllRolls] = useState([]);
 
   return (
     <div className="App">
       <Header />
       <Description />
-      <PickADice setNewNumber={setNewNumber} number={number} />
-      <DiceResult setNewNumber={setNewNumber} number={number} />
-      <ResetButton setNewNumber={setNewNumber} number={number} />
+      <DiceCount setDiceCount={setDiceCount} />
+      <PickADice
+        setNewNumber={setNewNumber}
+        number={number}
+        diceCount={diceCount}
+        setAllRolls={setAllRolls}
+      />
+      <DiceResult number={number} allRolls={allRolls} />
+      <ResetButton setNewNumber={setNewNumber} setAllRolls={setAllRolls} />
     </div>
   );
 }

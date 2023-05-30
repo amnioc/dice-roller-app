@@ -1,50 +1,26 @@
 const PickADice = (props) => {
-  const { setNewNumber } = props;
-
-  const roll4Sider = () => {
-    setNewNumber(() => {
-      return Math.floor(Math.random() * (4 - 1 + 1) + 1);
-    });
-  };
-
-  const roll6Sider = () => {
-    setNewNumber(() => {
-      return Math.floor(Math.random() * (6 - 1 + 1) + 1);
-    });
-  };
-
-  const roll8Sider = () => {
-    setNewNumber(() => {
-      return Math.floor(Math.random() * (8 - 1 + 1) + 1);
-    });
-  };
-
-  const roll10Sider = () => {
-    setNewNumber(() => {
-      return Math.floor(Math.random() * (10 - 1 + 1) + 1);
-    });
-  };
-
-  const roll12Sider = () => {
-    setNewNumber(() => {
-      return Math.floor(Math.random() * (12 - 1 + 1) + 1);
-    });
-  };
-
-  const roll20Sider = () => {
-    setNewNumber(() => {
-      return Math.floor(Math.random() * (20 - 1 + 1) + 1);
-    });
+  const { setNewNumber, diceCount, setAllRolls } = props;
+  let total = [];
+  let subTotal = 0;
+  const rollFunction = (diceCount, diceSides) => {
+    total = [];
+    for (let i = 1; i <= diceCount; i++) {
+      const thisRoll = Math.floor(Math.random() * (diceSides - 1 + 1) + 1);
+      total.push(thisRoll);
+      subTotal += thisRoll;
+    }
+    setNewNumber(subTotal);
+    setAllRolls(total);
   };
 
   return (
     <section id="DiceSelection">
-      <button onClick={() => roll4Sider()}>4-sides</button>
-      <button onClick={() => roll6Sider()}>6-sides</button>
-      <button onClick={() => roll8Sider()}>8-sides</button>
-      <button onClick={() => roll10Sider()}>10-sides</button>
-      <button onClick={() => roll12Sider()}>12-sides</button>
-      <button onClick={() => roll20Sider()}>20-sides</button>
+      <button onClick={() => rollFunction(diceCount, 4)}>4-sides</button>
+      <button onClick={() => rollFunction(diceCount, 6)}>6-sides</button>
+      <button onClick={() => rollFunction(diceCount, 8)}>8-sides</button>
+      <button onClick={() => rollFunction(diceCount, 10)}>10-sides</button>
+      <button onClick={() => rollFunction(diceCount, 12)}>12-sides</button>
+      <button onClick={() => rollFunction(diceCount, 20)}>20-sides</button>
     </section>
   );
 };
