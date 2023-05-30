@@ -11,6 +11,7 @@ const ResetButton = (props) => {
       onClick={() => {
         resetScreen();
       }}
+      className="button"
     >
       Clear Result
     </button>

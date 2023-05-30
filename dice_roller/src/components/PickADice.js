@@ -1,8 +1,12 @@
+import { useEffect } from "react";
+
 const PickADice = (props) => {
   const { setNewNumber, diceCount, setAllRolls } = props;
   let total = [];
   let subTotal = 0;
+
   const rollFunction = (diceCount, diceSides) => {
+    setNewNumber("");
     total = [];
     for (let i = 1; i <= diceCount; i++) {
       const thisRoll = Math.floor(Math.random() * (diceSides - 1 + 1) + 1);
@@ -14,7 +18,7 @@ const PickADice = (props) => {
   };
 
   return (
-    <section id="DiceSelection">
+    <section className="dice-selection">
       <button onClick={() => rollFunction(diceCount, 4)}>4-sides</button>
       <button onClick={() => rollFunction(diceCount, 6)}>6-sides</button>
       <button onClick={() => rollFunction(diceCount, 8)}>8-sides</button>

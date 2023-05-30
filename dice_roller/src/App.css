@@ -1,15 +1,11 @@
 .App {
   text-align: center;
   background-color: rgb(230, 230, 230);
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  font-size: 25px;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #082260;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -19,7 +15,7 @@
   color: white;
 }
 
-#rollButton {
+button {
   background-color: orangered;
   color: white;
   font-size: 25px;
@@ -29,14 +25,10 @@
   text-align: center;
 }
 
-#description {
+.description {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#specialMessage {
-  font-style: italic;
 }
 
 #rollResult {

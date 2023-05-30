@@ -10,11 +10,7 @@ const DiceResult = (props) => {
             Throw <span>Number</span>
           </li>
           {allRolls.map((roll, index) => {
-            return (
-              <li key={roll}>
-                <span className="throw-num">{index + 1}</span> {roll}
-              </li>
-            );
+            return <li key={index}>{roll}</li>;
           })}
         </ul>
       </article>
