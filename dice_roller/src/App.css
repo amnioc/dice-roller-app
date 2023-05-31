@@ -35,11 +35,17 @@
   align-items: center;
 }
 
-#specialMessage {
-  font-style: italic;
+.dice-count-form {
+  display: inline-block;
 }
 
-#rollResult {
+.dice-input {
+  padding: 10px;
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.roll-result {
   display: block;
   justify-content: center;
   font-size: 25px;
@@ -47,7 +53,7 @@
   align-items: center;
 }
 
-#rollNumber {
+#final-roll {
   display: block;
   padding: 50px;
   font-size: 2rem;

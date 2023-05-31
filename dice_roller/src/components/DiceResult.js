@@ -1,8 +1,8 @@
 const DiceResult = (props) => {
   const { number, allRolls } = props;
   return (
-    <section id="rollResult">
-      You got a...<span id="rollNumber">{number}</span>{" "}
+    <section className="roll-result">
+      You got a...<span id="final-roll">{number}</span>{" "}
       <article>
         Made up of...
         <ul className="throws-list">
@@ -11,8 +11,8 @@ const DiceResult = (props) => {
           </li>
           {allRolls.map((roll, index) => {
             return (
-              <li key={roll}>
-                <span className="throw-num">{index + 1}</span> {roll}
+              <li key={index}>
+                throw {index + 1} was a {roll}
               </li>
             );
           })}
