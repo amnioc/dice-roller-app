@@ -7,12 +7,14 @@ const DiceResult = (props) => {
         Made up of...
         <ul className="throws-list">
           <li>
-            Throw <span>Number</span>
+            <span id="word-throw">throw</span>{" "}
+            <span id="word-was">was a...</span>
           </li>
           {allRolls.map((roll, index) => {
             return (
               <li key={index}>
-                throw {index + 1} was a {roll}
+                <span className="throw-number">{index + 1}</span>{" "}
+                <span className="throw-result">{roll}</span>
               </li>
             );
           })}

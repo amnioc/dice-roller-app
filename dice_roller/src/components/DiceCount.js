@@ -2,7 +2,7 @@ const DiceCount = (props) => {
   const { setDiceCount } = props;
 
   return (
-    <form classname="dice-count-form">
+    <form className="dice-count-form">
       <label>
         {" "}
         How many die are you throwing?
@@ -14,6 +14,7 @@ const DiceCount = (props) => {
           className="dice-input"
           onChangeCapture={(event) => {
             setDiceCount(parseInt(event.target.value));
+            if (!event.target.value);
           }}
         ></input>
       </label>

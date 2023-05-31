@@ -1,15 +1,12 @@
 .App {
   text-align: center;
   background-color: rgb(230, 230, 230);
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  font-size: 25px;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #2b4906;
+  font-family: cursive;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -19,30 +16,43 @@
   color: white;
 }
 
-#rollButton {
-  background-color: orangered;
+button {
+  background-color: #654519;
   color: white;
   font-size: 25px;
   width: 250px;
   padding: 15px 32px;
   margin: 4px 25px;
   text-align: center;
+  border-radius: 10px;
 }
 
 #description {
-  display: flex;
+  display: flex-inline;
   justify-content: center;
   align-items: center;
+  line-height: 40px;
+}
+
+.focus-word {
+  color: #5f1c8a;
 }
 
 .dice-count-form {
   display: inline-block;
+  font-size: 25px;
+  background-color: #ab611c;
+  padding: 15px;
+  border-radius: 10px;
+
+  margin: 20px;
 }
 
 .dice-input {
   padding: 10px;
   margin-left: 20px;
   font-size: 25px;
+  box-sizing: border-box;
 }
 
 .roll-result {
@@ -63,8 +73,20 @@
 
 .throws-list {
   list-style-type: none;
+  display: grid;
+  border: 5px, solid, #2b4906;
 }
 
-.throw-num {
+#word-throw {
+}
+
+#word-was {
+}
+
+.throw-number {
   margin-right: 20px;
+}
+
+.throw-result {
+  margin-left: 20px;
 }
