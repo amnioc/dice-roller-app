@@ -15,7 +15,7 @@ const PickADice = (props) => {
   };
 
   return (
-    <section id="DiceSelection">
+    <section id="dice-buttons">
       <button onClick={() => rollFunction(diceCount, 4)}>4-sides</button>
       <button onClick={() => rollFunction(diceCount, 6)}>6-sides</button>
       <button onClick={() => rollFunction(diceCount, 8)}>8-sides</button>

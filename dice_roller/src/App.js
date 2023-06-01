@@ -25,7 +25,12 @@ function App() {
         setAllRolls={setAllRolls}
         setChosenDie={setChosenDie}
       />
-      <DiceResult number={number} allRolls={allRolls} chosenDie={chosenDie} />
+      <DiceResult
+        number={number}
+        allRolls={allRolls}
+        chosenDie={chosenDie}
+        diceCount={diceCount}
+      />
       <ResetButton setNewNumber={setNewNumber} setAllRolls={setAllRolls} />
     </div>
   );
