@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: rgb(230, 230, 230);
+  background-color: #e6e6e6;
   font-size: 25px;
 }
 
@@ -39,6 +39,12 @@ button:hover {
   line-height: 40px;
 }
 
+#description-image {
+  max-width: 250px;
+  width: 100%;
+  border: 5px solid #2b4906;
+  border-radius: 10px;
+}
 .focus-word {
   color: #5f1c8a;
 }
