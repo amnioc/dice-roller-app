@@ -1,11 +1,11 @@
 const Description = () => {
   return (
-    <section id="description">
+    <section id="description" aria-label="app description">
       <h3>Welcome!</h3>
       <br />
       1. Please <span className="focus-word"> enter your number</span> of dice
-      being thrown (will default to 1). <br /> 2. Then choose how many sides
-      your dice has!
+      being thrown (if empty, we'll assume 1). <br /> 2. Then, choose how many
+      sides your dice have!
       <br />
       <span className="focus-word"> *May the Odds Be in Your Favour*</span>
     </section>

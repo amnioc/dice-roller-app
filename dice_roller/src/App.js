@@ -9,6 +9,7 @@ import DiceCount from "./components/DiceCount";
 
 function App() {
   const [number, setNewNumber] = useState("");
+  const [chosenDie, setChosenDie] = useState("");
   const [diceCount, setDiceCount] = useState("1");
   const [allRolls, setAllRolls] = useState([]);
 
@@ -22,8 +23,9 @@ function App() {
         number={number}
         diceCount={diceCount}
         setAllRolls={setAllRolls}
+        setChosenDie={setChosenDie}
       />
-      <DiceResult number={number} allRolls={allRolls} />
+      <DiceResult number={number} allRolls={allRolls} chosenDie={chosenDie} />
       <ResetButton setNewNumber={setNewNumber} setAllRolls={setAllRolls} />
     </div>
   );
