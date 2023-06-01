@@ -18,4 +18,4 @@ View via Github:
 
 # Screenshot
 
-<img src="dice_roller/Screenshot_Dice.png" alt="dice roller web app">
+<img src="dice_roller/Screenshot_Dice.png" alt="dice roller web app full page">
